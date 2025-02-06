@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Dashboard</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="scripts/script.js" defer></script>
+    <script>
+        function openTab(tabName) {
+            document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
+            document.getElementById(tabName).classList.add('active');
+        }
+</script>
+</head>
+<body>
+    <header>
+        <div class="banner">
+        <img src="images/banner.jpeg" alt="Data Center Banner">
+        </div>
+    </header>
+    
+  
+    <div class="tabs">
+        <button onclick="openTab('projects')">Projects</button>
+        <button onclick="openTab('certifications')">Certifications</button>
+        <button onclick="openTab('support')">Support</button>
+    </div>
+    
+    <div id="projects" class="tab-content active">
+        <h2>Ongoing Projects</h2>
+        <table>
+            <tr>
+                <th>Project</th>
+                <th>Customer</th>
+                <th>Status</th>
+                <th>Progress</th>
+            </tr>
+            <tr>
+                <td>Infrastructure Upgrade</td>
+                <td>CRDB Bank</td>
+                <td><span class="badge warning">In Progress</span></td>
+                <td>
+                    <div class="progress"><div class="progress-bar" style="width: 65%;"></div></div>
+                    65%
+                </td>
+            </tr>
+        </table>
+    </div>
+    
+    <div id="certifications" class="tab-content">
+        <h2>Certification Progress</h2>
+        <table>
+            <tr>
+                <th>Certification</th>
+                <th>Vendor</th>
+                <th>Status</th>
+            </tr>
+            <tr>
+                <td>VxRail Deployment</td>
+                <td>DELLEMC</td>
+                <td><span class="badge success">Completed</span></td>
+            </tr>
+            <tr>
+                <td>Cloud Security</td>
+                <td>Azure</td>
+                <td><span class="badge warning">In Progress</span></td>
+            </tr>
+        </table>
+    </div>
+    
+    <div id="support" class="tab-content">
+        <h2>Support Contracts</h2>
+        <table>
+            <tr>
+                <th>Service</th>
+                <th>Provider</th>
+                <th>Status</th>
+            </tr>
+            <tr>
+                <td>OEM Support</td>
+                <td>DELLEMC</td>
+                <td><span class="badge success">Active</span></td>
+            </tr>
+            <tr>
+                <td>Local Maintenance</td>
+                <td>TechSolutions Ltd.</td>
+                <td><span class="badge danger">Expiring Soon</span></td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
